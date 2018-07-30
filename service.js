@@ -16,7 +16,12 @@ module.exports = {
 						(req,res, next)=>{console.log("Middleware");return next()},
 						"www.welcome"
 					],
-					"GET /test": "www.welcome"//Will work good
+					"GET /test": "www.welcome",//Will work good
+					"GET /hello": [//will not work
+						(req,res, next)=>{console.log("Middleware");return next()},
+						"www.hello"
+					],
+					"GET /hello1": "www.hello"//Will work good
 				}
 			}
 		]
@@ -40,6 +45,11 @@ module.exports = {
 			pack: true,
 			handler() {
 				return `Welcome`;
+			}
+		},
+		hello: {
+			handler() {
+				throw new Error("error");
 			}
 		}
 	},

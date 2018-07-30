@@ -1,0 +1,26 @@
+{
+  "name": "middleware-issue",
+  "version": "1.0.0",
+  "description": "My Moleculer microservice",
+  "scripts": {
+    "dev": "moleculer-runner --repl --hot service.js",
+    "start": "moleculer-runner service.js",
+    "lint": "eslint services"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "moleculer-repl": "^0.5.0"
+  },
+  "dependencies": {
+    "moleculer": "^0.13.0",
+    "moleculer-web": "^0.8.0"
+  },
+  "engines": {
+    "node": ">= 8.x.x"
+  }
+}
